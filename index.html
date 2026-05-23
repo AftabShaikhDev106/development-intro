@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnerGlobix Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Symbol Custom"', "sans-serif"],
+              serif: ['"Symbol Custom"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: "Symbol Custom";
+        src: url("assets/Document fonts/Symbol.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: "Symbol Custom", sans-serif;
+      }
+      .bg-layer-1 {
+        background-image: url("assets/images/second-large.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: crossfade-1 16s infinite ease-in-out;
+      }
+      .bg-layer-2 {
+        background-image: url("assets/images/large-lux.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: crossfade-2 16s infinite ease-in-out;
+      }
+      @keyframes crossfade-1 {
+        0%,
+        40%,
+        100% {
+          opacity: 1;
+        }
+        50%,
+        90% {
+          opacity: 0;
+        }
+      }
+      @keyframes crossfade-2 {
+        0%,
+        40%,
+        100% {
+          opacity: 0;
+        }
+        50%,
+        90% {
+          opacity: 1;
+        }
+      }
+
+      .overlay-main {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body class="bg-black relative h-svh w-full overflow-hidden lg:h-screen">
+    <!-- Background Layers for Crossfade Animation -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="bg-layer-1 absolute inset-0"></div>
+      <div class="bg-layer-2 absolute inset-0"></div>
+    </div>
+
+    <!-- Main Overlay Layout -->
+    <div
+      class="absolute inset-0 z-10 overlay-main flex flex-col justify-between items-center py-10 px-6 md:py-12 md:px-12"
+    >
+      <!-- Top Header -->
+      <div class="w-full flex justify-between items-center pointer-events-none">
+        <!-- Spacer to balance hamburger and center the logo -->
+        <div class="w-8 h-8 md:w-10 md:h-10"></div>
+
+        <!-- Center Logo -->
+        <div
+          class="pointer-events-auto transition duration-300 hover:scale-105"
+        >
+          <img
+            src="assets/images/development-logo.png"
+            alt="EnerGlobix Development"
+            class="h-20 md:h-26 object-contain"
+          />
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button
+          class="text-white pointer-events-auto hover:text-gray-300 transition duration-300"
+        >
+          <svg
+            class="w-8 h-8 md:w-10 md:h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Center Content -->
+      <div
+        class="flex flex-col items-center justify-center text-center max-w-4xl px-4 my-auto pointer-events-auto"
+      >
+        <h1
+          class="text-white text-xl md:text-3xl lg:text-4xl font-light tracking-wider mb-8 md:mb-10 drop-shadow-lg leading-relaxed max-w-3xl"
+        >
+          EnerGlobix. Shaping global investment opportunities & communities
+        </h1>
+        <a
+          href="https://energlobixdevelopment.kasehub.com/"
+          class="border border-white/20 text-[#C2B18F] px-8 py-2 md:px-10 md:py-2.5 tracking-[0.25em] text-[11px] md:text-xs bg-black uppercase inline-block font-medium hover:bg-white hover:text-black transition duration-300 shadow-md"
+        >
+          DISCOVER
+        </a>
+      </div>
+
+      <!-- Footer Section -->
+      <div
+        class="w-full flex flex-col items-center mt-auto pointer-events-none"
+      >
+        <!-- Holdings Logo (Middle Bottom) -->
+        <div
+          class="flex flex-col items-center pointer-events-auto transition duration-300 hover:scale-105"
+        >
+          <img
+            src="assets/images/top-logo.png"
+            alt="EnerGlobix Holdings"
+            class="h-10 md:h-12 object-contain"
+          />
+          <div
+            class="text-[#192D50] text-xs tracking-[0.3em] font-semibold mt-1"
+          >
+            HOLDINGS
+          </div>
+        </div>
+
+        <!-- Footnote Subtext -->
+        <p
+          class="text-white/50 text-[9px] md:text-xs tracking-[0.25em] uppercase font-light mt-6 text-center"
+        >
+          ENERGLOBIX DEVELOPMENT - A PART OF ENERGLOBIX HOLDING
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
