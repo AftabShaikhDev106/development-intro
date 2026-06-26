@@ -159,9 +159,12 @@
         background-color: #000;
         padding: 0.5rem 2rem; /* px-8 py-2 */
         letter-spacing: 0.25em; /* tracking-[0.25em] */
+        text-indent: 0.25em; /* offset the letter-spacing on the right of the last letter */
         font-size: 11px; /* text-[11px] */
         text-transform: uppercase;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 500;
         transition: all 0.3s ease;
         box-shadow:
@@ -613,9 +616,8 @@
         <a
           href="https://energlobixdevelopment.kasehub.com/"
           class="btn-discover"
+          >DISCOVER</a
         >
-          DISCOVER
-        </a>
       </div>
 
       <!-- Footer Section -->
