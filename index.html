@@ -19,8 +19,10 @@
     />
     <style>
       @font-face {
-        font-family: "Symbol Custom";
-        src: url("assets/Document fonts/Symbol.ttf") format("truetype");
+        font-family: "Adelle-Sans-Light";
+        src: url("./assets/Document\ fonts/Adelle-Sans-Light.otf")
+          format("truetype");
+        /* IE9 Compat Modes */
         font-weight: normal;
         font-style: normal;
       }
@@ -31,7 +33,7 @@
         height: 100svh;
         width: 100%;
         margin: 0;
-        font-family: "Symbol Custom", sans-serif;
+        font-family: "Adelle-Sans-Light";
         background-color: #000;
         position: relative;
         overflow: hidden;
@@ -96,7 +98,7 @@
       }
 
       .overlay-main {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.15);
         z-index: 10;
       }
 
@@ -157,11 +159,12 @@
         /* border: 1px solid rgba(255, 255, 255, 0.2); */
         color: #c2b18f;
         background-color: #000;
-        padding: 0.5rem 2rem; /* px-8 py-2 */
+        padding: 0.6rem 2rem; /* px-8 py-2 */
         letter-spacing: 0.25em; /* tracking-[0.25em] */
         text-indent: 0.25em; /* offset the letter-spacing on the right of the last letter */
         font-size: 11px; /* text-[11px] */
         text-transform: uppercase;
+        line-height: 1;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -220,7 +223,7 @@
           margin-bottom: 2.5rem; /* mb-10 */
         }
         .btn-discover {
-          padding: 0.625rem 2.5rem; /* px-10 py-2.5 */
+          padding: 0.7rem 2.5rem; /* px-10 py-2.5 */
           font-size: 12px; /* text-xs */
         }
         .logo-holdings {
@@ -613,11 +616,9 @@
         <h1 class="hero-title">
           EnerGlobix. Shaping global investment opportunities & communities
         </h1>
-        <a
-          href="https://energlobixdevelopment.kasehub.com/"
-          class="btn-discover"
-          >DISCOVER</a
-        >
+        <a href="https://energlobixdevelopment.kasehub.com/">
+          <div class="btn-discover">DISCOVER</div>
+        </a>
       </div>
 
       <!-- Footer Section -->
